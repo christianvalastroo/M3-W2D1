@@ -102,7 +102,6 @@ body{
   color: var(--text);
 }
 
-/* List group più dark */
 .list-group-item{
   background: rgba(0,0,0,.18);
   color: var(--text);
@@ -112,7 +111,25 @@ body{
 /* NAVBAR E FOOTER */
 .navbar.bg-dark{
   background: rgba(10,20,40,.65) !important;
-  backdrop-filter: blur(10px);
+}
+
+.navbar-dark .offcanvas{
+  background: rgba(10,20,40,.98) !important;
+  background-image: none !important;
+  backdrop-filter: none !important;
+}
+
+.navbar-dark .offcanvas .nav-link{
+  opacity: 1 !important;
+  visibility: visible !important;
+  color: #fff !important;
+  mix-blend-mode: normal !important;
+  text-shadow: 0 1px 0 rgba(0,0,0,.35) !important;
+  padding: .6rem 0 !important;
+  font-size: 1.05rem !important;
+}
+.navbar-dark .offcanvas .offcanvas-header{
+  border-bottom: 1px solid rgba(255,255,255,.12) !important;
 }
 
 footer.bg-dark{

@@ -36,6 +36,10 @@ body{
   background: linear-gradient(180deg, rgba(255,255,255,.06), transparent);
 }
 
+.hero-actions{
+  margin-top: 2.25rem;
+}
+
 /* CARD ALBUM */
 .album-card{
   background: var(--surface);
@@ -113,6 +117,20 @@ body{
   background: rgba(10,20,40,.65) !important;
 }
 
+.navbar .container-fluid{
+  padding-top: .4rem;
+  padding-bottom: .4rem;
+}
+
+.navbar-brand{
+  font-size: 1.2rem;
+  letter-spacing: .2px;
+}
+
+.navbar-toggler{
+  padding: .45rem .65rem;
+}
+
 .navbar-dark .offcanvas{
   background: rgba(10,20,40,.98) !important;
   background-image: none !important;
@@ -135,4 +153,33 @@ body{
 footer.bg-dark{
   background: rgba(10,20,40,.70) !important;
   backdrop-filter: blur(10px);
+}
+
+/* BOTTONI */
+.btn-album-primary{
+  background: #f4f4f6;
+  color: #0c1424;
+  border: 1px solid #f4f4f6;
+  font-weight: 600;
+}
+
+.btn-album-primary:hover,
+.btn-album-primary:focus-visible{
+  background: #ffffff;
+  color: #0c1424;
+  border-color: #ffffff;
+}
+
+.btn-album-ghost{
+  background: transparent;
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,.55);
+  font-weight: 600;
+}
+
+.btn-album-ghost:hover,
+.btn-album-ghost:focus-visible{
+  background: rgba(255,255,255,.12);
+  color: #ffffff;
+  border-color: rgba(255,255,255,.8);
 }

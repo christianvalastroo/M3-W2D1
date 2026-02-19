@@ -1,58 +1,280 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Album</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Albums</title>
 
-    <!-- bootstrap 5.3.8-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Bootstrap 5.3.8 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
-<nav class="navbar navbar-dark bg-dark fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#top">My Albums</a>
+<body id="top">
 
-    <button class="navbar-toggler" type="button"
-      data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasDarkNavbar"
-      aria-controls="offcanvasDarkNavbar"
-      aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <!-- NAVBAR + OFFCANVAS -->
+  <nav class="navbar navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-semibold" href="#top">My Albums</a>
 
-    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1"
-      id="offcanvasDarkNavbar"
-      aria-labelledby="offcanvasDarkNavbarLabel">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+        aria-label="Apri menu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
-        <button type="button" class="btn-close btn-close-white"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"></button>
-      </div>
+      <div
+        class="offcanvas offcanvas-end text-bg-dark"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="offcanvas"
+            aria-label="Chiudi"
+          ></button>
+        </div>
 
-      <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item">
-            <a class="nav-link active" href="#top">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#preferiti">Preferiti</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#evidenza">Album in evidenza</a>
-          </li>
-        </ul>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" href="#preferiti">Preferiti</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#evidenza">In evidenza</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Footer</a>
+            </li>
+          </ul>
+        </div>
       </div>
 
     </div>
-  </div>
-</nav>
+  </nav>
 
+  <!-- HERO / HEADER -->
+  <header class="hero py-5">
+    <div class="container text-center">
+      <h1 class="display-6 fw-bold mb-2">Collezione Rock</h1>
+      <p class="lead text-secondary mb-4">
+        8 album iconici + un album in evidenza con tracklist.
+      </p>
+
+      <div class="d-flex justify-content-center gap-2 flex-wrap">
+        <a class="btn btn-dark" href="#preferiti">Vai ai preferiti</a>
+        <a class="btn btn-outline-dark" href="#evidenza">Vedi in evidenza</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- SEZIONE PREFERITI -->
+    <section id="preferiti" class="py-5">
+      <div class="container">
+        <div class="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-4">
+          <div>
+            <h2 class="h3 mb-1">Album Preferiti</h2>
+            <p class="text-secondary mb-0">Griglia responsive 2 / 3 / 4 per riga.</p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="card h-100 album-card">
+              <img src="assets/51UtWpxbNYL._UF1000,1000_QL80_.jpg" class="card-img-top album-cover" alt="The Dark Side of the Moon - Pink Floyd">
+              <div class="card-body">
+                <h3 class="h6 card-title mb-1">The Dark Side of the Moon</h3>
+                <p class="card-text text-secondary mb-2">Pink Floyd</p>
+                <div class="d-flex gap-2 flex-wrap">
+                  <span class="badge text-bg-secondary">Rock</span>
+                  <span class="badge text-bg-light border">43 min</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="card h-100 album-card">
+              <img src="assets/61ZhsEYnSdL._UF894,1000_QL80_.jpg" class="card-img-top album-cover" alt="Nevermind - Nirvana">
+              <div class="card-body">
+                <h3 class="h6 card-title mb-1">Nevermind</h3>
+                <p class="card-text text-secondary mb-2">Nirvana</p>
+                <div class="d-flex gap-2 flex-wrap">
+                  <span class="badge text-bg-secondary">Grunge</span>
+                  <span class="badge text-bg-light border">49 min</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="card h-100 album-card">
+              <img src="assets/ACDC_Back_in_Black.png" class="card-img-top album-cover" alt="Back in Black - AC/DC">
+              <div class="card-body">
+                <h3 class="h6 card-title mb-1">Back in Black</h3>
+                <p class="card-text text-secondary mb-2">AC/DC</p>
+                <div class="d-flex gap-2 flex-wrap">
+                  <span class="badge text-bg-secondary">Hard Rock</span>
+                  <span class="badge text-bg-light border">42 min</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="card h-100 album-card">
+              <img src="assets/Unknown.jpeg" class="card-img-top album-cover" alt="Master of Puppets - Metallica">
+              <div class="card-body">
+                <h3 class="h6 card-title mb-1">Master of Puppets</h3>
+                <p class="card-text text-secondary mb-2">Metallica</p>
+                <div class="d-flex gap-2 flex-wrap">
+                  <span class="badge text-bg-secondary">Metal</span>
+                  <span class="badge text-bg-light border">54 min</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="card h-100 album-card">
+              <img src="assets/Unknown-1.jpeg" class="card-img-top album-cover" alt="OK Computer - Radiohead">
+              <div class="card-body">
+                <h3 class="h6 card-title mb-1">OK Computer</h3>
+                <p class="card-text text-secondary mb-2">Radiohead</p>
+                <div class="d-flex gap-2 flex-wrap">
+                  <span class="badge text-bg-secondary">Alternative</span>
+                  <span class="badge text-bg-light border">53 min</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="card h-100 album-card">
+              <img src="assets/Unknown-2.jpeg" class="card-img-top album-cover" alt="Abbey Road - The Beatles">
+              <div class="card-body">
+                <h3 class="h6 card-title mb-1">Abbey Road</h3>
+                <p class="card-text text-secondary mb-2">The Beatles</p>
+                <div class="d-flex gap-2 flex-wrap">
+                  <span class="badge text-bg-secondary">Rock</span>
+                  <span class="badge text-bg-light border">47 min</span>
+                </div>
+              </div>
+            </article>
+          </div>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="card h-100 album-card">
+              <img src="assets/Unknown-3.jpeg" class="card-img-top album-cover" alt="Led Zeppelin IV - Led Zeppelin">
+              <div class="card-body">
+                <h3 class="h6 card-title mb-1">Led Zeppelin IV</h3>
+                <p class="card-text text-secondary mb-2">Led Zeppelin</p>
+                <div class="d-flex gap-2 flex-wrap">
+                  <span class="badge text-bg-secondary">Rock</span>
+                  <span class="badge text-bg-light border">42 min</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3">
+            <article class="card h-100 album-card">
+              <img src="assets/Unknown-4.jpeg" class="card-img-top album-cover" alt="Hybrid Theory - Linkin Park">
+              <div class="card-body">
+                <h3 class="h6 card-title mb-1">Hybrid Theory</h3>
+                <p class="card-text text-secondary mb-2">Linkin Park</p>
+                <div class="d-flex gap-2 flex-wrap">
+                  <span class="badge text-bg-secondary">Nu Metal</span>
+                  <span class="badge text-bg-light border">37 min</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SEZIONE IN EVIDENZA -->
+    <section id="evidenza" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="h3 text-center mb-5">Album in Evidenza</h2>
+
+        <div class="row g-4 align-items-center">
+
+          <div class="col-lg-5">
+            <img
+              src="assets/51UtWpxbNYL._UF1000,1000_QL80_.jpg"
+              class="img-fluid rounded-4 shadow-sm"
+              alt="The Dark Side of the Moon - Pink Floyd"
+            >
+          </div>
+
+          <div class="col-lg-7">
+            <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm">
+              <h3 class="h4 mb-1">The Dark Side of the Moon</h3>
+              <p class="text-secondary mb-3">Pink Floyd • Rock • 43 min</p>
+
+              <h4 class="h6 text-uppercase text-secondary mb-2">Tracklist</h4>
+              <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between">
+                  <span>Speak to Me</span><span class="text-secondary">1:30</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                  <span>Time</span><span class="text-secondary">6:53</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                  <span>Money</span><span class="text-secondary">6:22</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                  <span>Us and Them</span><span class="text-secondary">7:49</span>
+                </li>
+              </ul>
+
+              <div class="d-flex gap-2 flex-wrap">
+                <a class="btn btn-dark" href="#preferiti">Torna ai preferiti</a>
+                <a class="btn btn-outline-dark" href="#top">Su</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="py-4 bg-dark text-light">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
+      <p class="mb-0">© <span id="year"></span> My Albums • Progetto Bootstrap</p>
+      <div class="d-flex gap-3">
+        <a class="link-light link-underline-opacity-0 link-underline-opacity-100-hover" href="#top">Home</a>
+        <a class="link-light link-underline-opacity-0 link-underline-opacity-100-hover" href="#preferiti">Preferiti</a>
+        <a class="link-light link-underline-opacity-0 link-underline-opacity-100-hover" href="#evidenza">Evidenza</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

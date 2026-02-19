@@ -1,0 +1,121 @@
+:root{
+  --bg-1:#0c1424;
+  --bg-2:#142447;
+
+  --surface: rgba(255,255,255,.06);
+  --surface-2: rgba(255,255,255,.10);
+
+  --text:#f4f4f6;
+  --muted: rgba(244,244,246,.72);
+
+  --radius: 18px;
+  --radius-sm: 12px;
+
+  --shadow: 0 12px 30px rgba(0,0,0,.25);
+  --shadow-hover: 0 18px 45px rgba(0,0,0,.35);
+
+  --transition: .22s ease;
+}
+
+body{
+  padding-top: 80px;
+  color: var(--text);
+  background:
+    radial-gradient(900px 600px at 15% 10%, rgba(59,130,246,.35), transparent 60%),
+    radial-gradient(900px 600px at 85% 20%, rgba(96,165,250,.22), transparent 55%),
+    radial-gradient(1200px 800px at 20% 25%, var(--bg-2), transparent 65%),
+    linear-gradient(180deg, var(--bg-1), #050b16);
+}
+
+.text-secondary{
+  color: var(--muted) !important;
+}
+
+/* HERO */
+.hero{
+  background: linear-gradient(180deg, rgba(255,255,255,.06), transparent);
+}
+
+/* CARD ALBUM */
+.album-card{
+  background: var(--surface);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.album-card:hover{
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(255,255,255,.16);
+}
+
+/* COVER  */
+.album-cover{
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform .35s ease, filter .35s ease;
+}
+
+.album-card:hover .album-cover{
+  transform: scale(1.04);
+  filter: saturate(1.05) contrast(1.05);
+}
+
+.album-card .card-body{
+  padding: 14px 14px 16px;
+}
+
+.album-card .card-title{
+  color: var(--text);
+  font-weight: 650;
+  letter-spacing: -0.2px;
+}
+
+/* BADGE */
+.album-card .badge.text-bg-secondary{
+  background: rgba(255,255,255,.14) !important;
+  color: var(--text) !important;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 999px;
+  padding: .45em .7em;
+}
+
+.album-card .badge.text-bg-light.border{
+  background: rgba(0,0,0,.15) !important;
+  color: var(--text) !important;
+  border-color: rgba(255,255,255,.14) !important;
+  border-radius: 999px;
+  padding: .45em .7em;
+}
+
+/* SEZIONE EVIDENZA */
+#evidenza.bg-light{
+  background: rgba(255,255,255,.04) !important;
+}
+
+#evidenza .bg-white{
+  background: rgba(255,255,255,.08) !important;
+  border: 1px solid rgba(255,255,255,.10);
+  color: var(--text);
+}
+
+/* List group più dark */
+.list-group-item{
+  background: rgba(0,0,0,.18);
+  color: var(--text);
+  border-color: rgba(255,255,255,.10);
+}
+
+/* NAVBAR E FOOTER */
+.navbar.bg-dark{
+  background: rgba(10,20,40,.65) !important;
+  backdrop-filter: blur(10px);
+}
+
+footer.bg-dark{
+  background: rgba(10,20,40,.70) !important;
+  backdrop-filter: blur(10px);
+}
